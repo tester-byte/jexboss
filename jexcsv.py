@@ -56,7 +56,7 @@ for url in urls:
             results.append(result)
 
 fields = ["base_url", "vulnerability", "full_url", "status_code"]
-with open(args.output, "w") as output_file:
+with open(args.output, "a") as output_file:
     writer = DictWriter(output_file, fields)
     writer.writeheader()
     writer.writerows(results)
